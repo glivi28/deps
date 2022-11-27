@@ -2,10 +2,20 @@
 // Сніппет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
+	display: inline-block;
+	padding: rem(17) rem(30);
+	background: #009a44;
+	box-shadow: 0px rem(8) rem(16) rgba(0, 154, 68, 0.3);
+	border-radius: rem(6);
+	font-size: rem(18);
+	line-height: math.div(21, 18);
+	letter-spacing: -0.02em;
+	color: #fff;
+	text-align: center;
+	transition: all 0.3s ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: $themeColor;
 		}
 	}
 	&._fw {
