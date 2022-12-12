@@ -2,7 +2,7 @@
 .header {
 	z-index: 25;
 	position: relative;
-	box-shadow: 0px rem(16) rem(16) rgba(0, 0, 0, 0.03);
+	// box-shadow: 0px rem(16) rem(16) rgba(0, 0, 0, 0.03);
 	// box-shadow: 0px 18px 56px 0px rgba(0, 0, 0, 0.38);
 	// padding: rem(15) 0;
 	background-color: #fff;
@@ -16,6 +16,7 @@
 			height: rem(75);
 			background-color: #fff;
 			z-index: 20;
+			box-shadow: 0px 1rem 1rem rgb(0 0 0 / 3%);
 		}
 	}
 	@media (max-width: $mobileSmall) {

@@ -7,7 +7,7 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -29,16 +29,17 @@ function initSliders() {
 	// Перевіряємо, чи є слайдер на сторінці
 	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+		new Swiper('.realized__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 3,
+			spaceBetween: 20,
 			autoHeight: true,
 			speed: 800,
+			initialSlide: 1,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -56,12 +57,12 @@ function initSliders() {
 			*/
 
 			// Пагінація
-			/*
+
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.realized__pagination',
 				clickable: true,
 			},
-			*/
+
 
 			// Скроллбар
 			/*
@@ -73,31 +74,36 @@ function initSliders() {
 
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.realized__slider_prev',
+				nextEl: '.realized__slider_next',
 			},
-			/*
+
 			// Брейкпоінти
 			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
+				320: {
+					slidesPerView: 'auto',
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 15,
 					autoHeight: true,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
+				// 992: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 20,
+				// },
+				// 1268: {
+				// 	slidesPerView: 3,
+				// 	spaceBetween: 20,
+				// },
 			},
-			*/
+
 			// Події
 			on: {
 

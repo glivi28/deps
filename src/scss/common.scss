@@ -1,1 +1,39 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.section {
+	// .section__padding
+	&__padding {
+		@include adaptiveValue("padding-top", 60, 30, 0, 1024, 480);
+		@include adaptiveValue("padding-bottom", 60, 30, 0, 1024, 480);
+		// .section__padding_xl
+		&_xl {
+			// @include adaptiveValue("padding-top", 60, 30, 0, 1024, 480);
+			@include adaptiveValue("padding-bottom", 120, 60, 0, 1024, 480);
+		}
+	}
+	// .section__caption
+	&__caption {
+		display: inline-flex;
+		align-items: center;
+		margin-bottom: rem(8);
+		font-weight: 500;
+		line-height: 160%;
+		color: $themeColor;
+		@include adaptiveValue("font-size", 18, 14, 0, 1024, 480);
+
+		&::before {
+			content: "";
+			width: rem(26);
+			height: rem(2);
+			margin-right: rem(14);
+			background-color: $themeColor;
+		}
+	}
+	// .section__title
+	&__title {
+		font-weight: 500;
+		line-height: 120%;
+		color: #313647;
+		@include adaptiveValue("font-size", 46, 28, 0, 1024, 480);
+		@include adaptiveValue("margin-bottom", 40, 30, 0, 1024, 768);
+	}
+}

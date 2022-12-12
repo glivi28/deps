@@ -15,7 +15,8 @@
 	transition: all 0.3s ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $themeColor;
+			// background-color: $themeColor;
+			background-color: darken($color: $themeColor, $amount: 8%);
 		}
 	}
 	&._fw {
