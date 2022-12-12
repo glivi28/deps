@@ -1948,6 +1948,7 @@ h6 {
     -webkit-transition: all 0.8s ease 0s;
     -o-transition: all 0.8s ease 0s;
     transition: all 0.8s ease 0s;
+    overflow: auto;
   }
 
   .menu-open .header__menu {
