@@ -1,150 +1,509 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
-	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Опис проєкту
-			</div>
-			<h2>Готові сторінки:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Головна</a></li>
-			</ol>
-			<h2>Попапи:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Дякую за замовлення!</h2>
-				<p>Буду радий (да) гарному відгуку.</p>
-				<p>Звертайтесь ще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мої контакти:</h2>
-				<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-				<p>Соц. мережі: <a href="">посилання</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Deps"
+})
 
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__info">
+						<h1 class="hero__title">Парковочные решения <span>для жилых комплексов</span></h1>
+						<ul class="hero__list">
+							<li class="hero__item">
+								<div class="hero__icon">
+									<img src="@img/hero/icon-1.svg" alt="">
+								</div>
+								<p class="hero__text">Контроль проезда автомобилей</p>
+							</li>
+							<li class="hero__item">
+								<div class="hero__icon">
+									<img src="@img/hero/icon-2.svg" alt="">
+								</div>
+								<p class="hero__text">Безопасность на территории</p>
+							</li>
+							<li class="hero__item">
+								<div class="hero__icon">
+									<img src="@img/hero/icon-3.svg" alt="">
+								</div>
+								<p class="hero__text">Полная автоматизация проезда</p>
+							</li>
+						</ul>
+						<div class="hero__btn">
+							<a href="#" class="button">Получить консультацию</a>
+						</div>
+					</div>
+					<div class="hero__image-ibg">
+						<img src="@img/hero/main.svg" alt="">
+					</div>
+				</div>
+			</section>
+			<!-- /.hero -->
+
+			<section class="solutions">
+				<div class="solutions__container">
+					<div class="section__caption">Если</div>
+					<h2 class="section__title">Вы ищете решения:</h2>
+					<div class="solutions__content">
+						<div class="solutions__questions">
+							<div class="solutions__question">
+								<p class="solutions__text">Занята парковка автомобилями из соседних дворов</p>
+								<div class="solutions__question_av">
+									<img src="@img/solutions/av-1.svg" alt="">
+								</div>
+							</div>
+							<div class="solutions__question">
+								<p class="solutions__text">Неопознанные авто
+									на парковке</p>
+								<div class="solutions__question_av">
+									<img src="@img/solutions/av-2.svg" alt="">
+								</div>
+							</div>
+							<div class="solutions__question">
+								<p class="solutions__text">Какое парковочное решение <br>
+									будет оптимальным для вас</p>
+								<div class="solutions__question_av">
+									<img src="@img/solutions/av-3.svg" alt="">
+								</div>
+							</div>
+							<div class="solutions__question">
+								<p class="solutions__text">Где найти комптентного и надежного подрядчика</p>
+								<div class="solutions__question_av">
+									<img src="@img/solutions/av-4.svg" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="solutions__image-ibg">
+							<img src="@img/solutions/pic-1.svg" alt="">
+						</div>
+					</div>
+					<div class="solutions__info">
+						<p class="">Большинство (78,5%) представителей жилых комплексов не знают, какое парковочное
+							решение оптимально подойдет для их ЖК. И это нормально, так как на рынке большой выбор парковочных
+							решений,
+							которые могут предлагать недобросовестные подрядчики</p>
+					</div>
+				</div>
+			</section>
+			<!-- /.solutions -->
+
+			<section class="advantages section__padding">
+				<div class="advantages__container">
+					<div class="section__caption">Вот почему</div>
+					<h2 class="section__title">Выбирают нас</h2>
+					<ul class="advantages__list">
+						<li class="advantages__item">
+							<div class="advantages__icon">
+								<img src="@img/advantages/icon-1.svg" alt="">
+							</div>
+							<div class="advantages__info">
+								<h4 class="advantages__caption">Индивидуально</h4>
+								<p class="advantages__text">Широкий выбор решений под ваши необходимости</p>
+							</div>
+						</li>
+						<li class="advantages__item">
+							<div class="advantages__icon">
+								<img src="@img/advantages/icon-2.svg" alt="">
+							</div>
+							<div class="advantages__info">
+								<h4 class="advantages__caption">Удобно</h4>
+								<p class="advantages__text">Реализация проекта под ключ</p>
+							</div>
+						</li>
+						<li class="advantages__item">
+							<div class="advantages__icon">
+								<img src="@img/advantages/icon-3.svg" alt="">
+							</div>
+							<div class="advantages__info">
+								<h4 class="advantages__caption">Профессионально</h4>
+								<p class="advantages__text">Выбор, установка, настройка и запуск парковки в вашем ЖК нашими опытными
+									инженерами</p>
+							</div>
+						</li>
+						<li class="advantages__item">
+							<div class="advantages__icon">
+								<img src="@img/advantages/icon-4.svg" alt="">
+							</div>
+							<div class="advantages__info">
+								<h4 class="advantages__caption">Надежно</h4>
+								<p class="advantages__text">Гарантия на парковочную систему - 12 месяцев</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- /.advantages -->
+
+			<section class="kits section__padding section__padding_xl">
+				<div class="kits__container">
+					<div class="section__caption">Надежные</div>
+					<h2 class="section__title kits__title">Готовые решения</h2>
+					<div class="kits__row">
+						<div class="kits__image">
+							<div class="kits__image-ibg">
+								<img src="@img/kits/01.svg" alt="">
+							</div>
+							<div class="kits__banner">
+								<span>на базе</span>
+								<span class="kits__banner_current">GSM</span>
+								<span>решения</span>
+							</div>
+						</div>
+						<div class="kits__content">
+							<div class="kits__info">
+								<h4 class="kits__name">Комплект БАЗОВЫЙ</h4>
+								<p class="kits__descr">Проезд на территорию осуществляется при помощи телефонного звонка (GSM)</p>
+								<ul class="kits__list">
+									<li class="kits__item">Шлагбаум</li>
+									<li class="kits__item">Радар для обнаружения авто</li>
+									<li class="kits__item">Контроллер индукционной (магнитной)</li>
+									<li class="kits__item">Монтажный комплект</li>
+									<li class="kits__item kits__item_bold">GSM - контроллер</li>
+								</ul>
+							</div>
+							<div class="kits__pricing">
+								<div class="kits__pricing-top">
+									<p class="kits__old-price">от 1500$</p>
+									<p class="kits__new-price">от 880$</p>
+									<p class="kits__without">*без учета стоимости работы</p>
+								</div>
+								<div class="kits__pricing-bottom">
+									<a href="$" class="kits__buy button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.kits__row -->
+					<div class="kits__row">
+						<div class="kits__image">
+							<div class="kits__image-ibg">
+								<img src="@img/kits/02.svg" alt="">
+							</div>
+							<div class="kits__banner">
+								<span>на базе</span>
+								<span class="kits__banner_current">LPR</span>
+								<span>решения</span>
+							</div>
+						</div>
+						<div class="kits__content">
+							<div class="kits__info">
+								<h4 class="kits__name">Комплект СТАНДАРТ</h4>
+								<p class="kits__descr">Проезд на территорию осуществляется при распознании автомобильного номера в
+									системе свой/чужой (LPR)</p>
+								<ul class="kits__list">
+									<li class="kits__item">Шлагбаум</li>
+									<li class="kits__item">Радар для обнаружения авто</li>
+									<li class="kits__item">Контроллер индукционной (магнитной)</li>
+									<li class="kits__item">Монтажный комплект</li>
+									<li class="kits__item kits__item_bold">IP-камера</li>
+									<li class="kits__item kits__item_bold">POE Watchdog коммутатор</li>
+								</ul>
+							</div>
+							<div class="kits__pricing">
+								<div class="kits__pricing-top">
+									<p class="kits__old-price">от 2100$</p>
+									<p class="kits__new-price">от 1400$</p>
+									<p class="kits__without">*без учета стоимости работы</p>
+								</div>
+								<div class="kits__pricing-bottom">
+									<a href="$" class="kits__buy button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.kits__row -->
+					<div class="kits__row">
+						<div class="kits__image">
+							<div class="kits__image-ibg">
+								<img src="@img/kits/03.svg" alt="">
+							</div>
+							<div class="kits__banner">
+								<span>на базе</span>
+								<span class="kits__banner_current">UHF</span>
+								<span>решения</span>
+							</div>
+						</div>
+						<div class="kits__content">
+							<div class="kits__info">
+								<h4 class="kits__name">Комплект ПРОДВИНУТЫЙ</h4>
+								<p class="kits__descr">Проезд на территорию осуществляется при считывании специальной метки
+									расположенной на автомобиле (UHF)</p>
+								<ul class="kits__list">
+									<li class="kits__item">Шлагбаум</li>
+									<li class="kits__item">Радар для обнаружения авто</li>
+									<li class="kits__item">Контроллер индукционной (магнитной)</li>
+									<li class="kits__item">Монтажный комплект</li>
+									<li class="kits__item kits__item_bold">Сетевой контроллер доступа</li>
+									<li class="kits__item kits__item_bold">UHF-считыватель уличный</li>
+									<li class="kits__item kits__item_bold">Считыватель настольный UHF</li>
+									<li class="kits__item kits__item_bold">Бесконтактные UHF метки
+									</li>
+								</ul>
+							</div>
+							<div class="kits__pricing">
+								<div class="kits__pricing-top">
+									<p class="kits__old-price">от 2400$</p>
+									<p class="kits__new-price">от 1600$</p>
+									<p class="kits__without">*без учета стоимости работы</p>
+								</div>
+								<div class="kits__pricing-bottom">
+									<a href="$" class="kits__buy button">Купить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.kits__row -->
+				</div>
+			</section>
+			<!-- /.kits -->
+
+			<section class="stages section__padding">
+				<div class="stages__container">
+					<div class="section__caption">Как мы работаем</div>
+					<h2 class="section__title">Этапы работ</h2>
+					<ul class="stages__list">
+						<li class="stages__item">
+							<div class="stages__icon">
+								<img src="@img/stages/ic-1.svg" alt="">
+							</div>
+							<h3 class="stages__title">Оставляете запрос</h3>
+							<p class="stages__descr">Это бесплатно</p>
+						</li>
+						<li class="stages__item">
+							<div class="stages__icon">
+								<img src="@img/stages/ic-2.svg" alt="">
+							</div>
+							<h3 class="stages__title">Консультация с нашим специалистом</h3>
+							<p class="stages__descr">Это тоже абсолютно бесплатно!</p>
+						</li>
+						<li class="stages__item">
+							<div class="stages__icon">
+								<img src="@img/stages/ic-3.svg" alt="">
+							</div>
+							<h3 class="stages__title">Монтаж оборудования </h3>
+							<p class="stages__descr">Зависит от стоимости расчета</p>
+						</li>
+						<li class="stages__item">
+							<div class="stages__icon">
+								<img src="@img/stages/ic-4.svg" alt="">
+							</div>
+							<h3 class="stages__title">Комфортное использование</h3>
+							<p class="stages__descr">Выше вложенных средств</p>
+						</li>
+					</ul>
+					<div class="stages__btn">
+						<a href="#" class=" button">Расчитать стоимость</a>
+					</div>
+				</div>
+			</section>
+			<!-- /.stages -->
+
+			<section class="equipment section__padding">
+				<div class="equipment__container">
+					<div class="section__caption">Как мы работаем</div>
+					<h2 class="section__title">Этапы работ</h2>
+					<div class="equipment__cards">
+						<article class="equipment__card equipment__card_w-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/01.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">BG1060</h3>
+								<p class="equipment__descr">современный шлагбаум с интерактивной световой индикацией, высокоэффективный
+									бесщеточный двигатель постоянного тока с ресурсом открытий не менее 3 000 000 циклов</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_h-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/02.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">VR10</h3>
+								<p class="equipment__descr">радар для обнаружения транспортных средств, который обезопасит проезд
+									транспорта под стрелой.
+								</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_h-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/03.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">PSA02 + PSA03</h3>
+								<p class="equipment__descr">петлевой детектор, служит для выезда любого транспорта из охраняемой
+									территории
+								</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_w-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/04.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">GSM-контроллер RC-4000</h3>
+								<p class="equipment__descr">служит сердцем системы и позволяет осуществить заезд на территорию по
+									нескольким сценариям</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_w-4fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/05.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">DL-852Q28B-LP</h3>
+								<p class="equipment__descr">камера которая способна распознать автомобильные номерные знаки и
+									осуществить пропуск зарегистрированных автомобилей на контролируемую территорию. Управление базой
+									данных номерных знаков осуществляется с WEB интерфейса устройства</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_h-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/06.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">Atlas 100</h3>
+								<p class="equipment__descr">контроллер с WEB интерфейсом, которым можно управлять с любого устройства.
+									Позволяет гибко настроить систему пропуска и сохраняет у себя на борту ключи и события происходящего
+								</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_h-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/07.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">UHF-10E PRO</h3>
+								<p class="equipment__descr">антенна с возможностью считывания ключей на расстоянии до 10 метров.
+									Позволит осуществлять допуск на объект без необходимости остановки транспортного средства.
+								</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_w-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/08.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">UR10RW-E</h3>
+								<p class="equipment__descr">настольный регистратор ключей, который позволяет добавлять новых
+									пользователей в систему не выходя из помещения</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+						<article class="equipment__card equipment__card_w-2fr">
+							<div class="equipment__image">
+								<img src="@img/equipment/09.png" alt="">
+							</div>
+							<div class="equipment__info">
+								<h3 class="equipment__name">RFID Stick UHF </h3>
+								<p class="equipment__descr">ключ-наклейка, которая крепится на лобовом стекле автомобиля для
+									распознавания системой свой-чужой.</p>
+							</div>
+						</article>
+						<!-- /.equipment__card -->
+					</div>
+					<div class="equipment__btn">
+						<a href="#" class="button">Расчитать стоимость</a>
+					</div>
+				</div>
+			</section>
+			<!-- /.equipment -->
+
+			<section class="realized section__padding">
+				<div class="realized__container">
+					<div class="section__caption">Наши</div>
+					<h2 class="section__title">Реализованные объекты</h2>
+				</div>
+				<div class="realized__container realized__container_full">
+					<!-- Оболочка слайдера -->
+					<div class="realized__slider swiper">
+						<!-- Двигающееся часть слайдера -->
+						<div class="realized__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<div class="realized__slide swiper-slide slide-realized">
+								<div class="slide-realized__image">
+									<img src="@img/realized/01.svg" alt="">
+									<span>UHF</span>
+								</div>
+								<h3 class="slide-realized__title">Жилой комплекс</h3>
+							</div>
+							<!-- Слайд -->
+							<div class="realized__slide swiper-slide slide-realized">
+								<div class="slide-realized__image">
+									<img src="@img/realized/02.svg" alt="">
+									<span>UHF</span>
+								</div>
+								<h3 class="slide-realized__title">Частный детский сад </h3>
+							</div>
+							<!-- Слайд -->
+							<div class="realized__slide swiper-slide slide-realized">
+								<div class="slide-realized__image">
+									<img src="@img/realized/03.svg" alt="">
+									<span>LPR</span>
+								</div>
+								<h3 class="slide-realized__title">Отельный комплекс</h3>
+							</div>
+							<!-- Слайд -->
+							<div class="realized__slide swiper-slide slide-realized">
+								<div class="slide-realized__image">
+									<img src="@img/realized/01.svg" alt="">
+									<span>UHF</span>
+								</div>
+								<h3 class="slide-realized__title">Жилой комплекс</h3>
+							</div>
+							<!-- Слайд -->
+							<div class="realized__slide swiper-slide slide-realized">
+								<div class="slide-realized__image">
+									<img src="@img/realized/02.svg" alt="">
+									<span>UHF</span>
+								</div>
+								<h3 class="slide-realized__title">Частный детский сад </h3>
+							</div>
+							<!-- Слайд -->
+							<div class="realized__slide swiper-slide slide-realized">
+								<div class="slide-realized__image">
+									<img src="@img/realized/03.svg" alt="">
+									<span>LPR</span>
+								</div>
+								<h3 class="slide-realized__title">Отельный комплекс</h3>
+							</div>
+							<div class="realized__slide swiper-slide slide-realized">
+								<div class="slide-realized__image">
+									<img src="@img/realized/03.svg" alt="">
+									<span>LPR</span>
+								</div>
+								<h3 class="slide-realized__title">Отельный комплекс</h3>
+							</div>
+						</div>
+						<div class="realized__slider-actions">
+							<!-- Если нужна пагинация -->
+							<div class="swiper-pagination realized__pagination"></div>
+							<!-- Если нужна навигация (влево/вправо) -->
+							<button type="button" class="swiper-button-prev realized__slider_btn realized__slider_prev">
+								<img src="@img/realized/arrow.svg" alt="">
+							</button>
+							<button type="button" class="swiper-button-next realized__slider_btn realized__slider_next">
+								<img src="@img/realized/arrow.svg" alt="">
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</section>
+			<!-- /.realized -->
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/_head.htm',{
-"title":"Deps"
-})
+
+<head>
+	<title>Deps</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20221212205009">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
 	<div class="wrapper">
-		@@include('html/_header.htm',{})
+		<header class="header">
+			<div class="header__container">
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<a href="#" class="header__logo"><img src="img/logo.svg" alt="Deps logo"></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a data-goto=".solutions" href="#" class="menu__link">Решения</a></li>
+							<li class="menu__item"><a data-goto=".kits" href="#" class="menu__link">Оборудование</a></li>
+							<li class="menu__item"><a data-goto=".realized" href="#" class="menu__link">Реализованные объекты</a></li>
+							<li class="menu__item"><a data-goto=".footer" href="#" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+					<div class="header__contacts">
+						<a href="mailto:yevgen.mykhaylov@deps.ua" class="header__email header__contact">
+							<div class="header__email_icon header__contact_icon"></div>
+							<span>Yevgen.Mykhaylov@deps.ua</span>
+						</a>
+						<a href="tel:+380676184407" class="header__phone header__contact">
+							<div class="header__phone_icon header__contact_icon"></div>
+							<span>+380 67 618 44 07</span>
+						</a>
+						<a href="#" class="header__consult button">Получить консультацию</a>
+					</div>
+				</div>
+				<!-- /.header__menu menu -->
+				<div class="header__actions">
+					<ul class="header__langs langs-header">
+						<li class="langs-header__item">
+							<a href="" class="langs-header__link langs-header__link_active">RU</a>
+						</li>
+						<li class="langs-header__item">
+							<a href="" class="langs-header__link">UA</a>
+						</li>
+					</ul>
+					<a href="#" class="header__button button">Узнать цену</a>
+				</div>
+			</div>
+		</header>
 		<main class="page">
 			<section class="hero">
 				<div class="hero__container">
@@ -15,19 +61,19 @@
 						<ul class="hero__list">
 							<li class="hero__item">
 								<div class="hero__icon">
-									<img src="@img/hero/icon-1.svg" alt="">
+									<img src="img/hero/icon-1.svg" alt="">
 								</div>
 								<p class="hero__text">Контроль проезда автомобилей</p>
 							</li>
 							<li class="hero__item">
 								<div class="hero__icon">
-									<img src="@img/hero/icon-2.svg" alt="">
+									<img src="img/hero/icon-2.svg" alt="">
 								</div>
 								<p class="hero__text">Безопасность на территории</p>
 							</li>
 							<li class="hero__item">
 								<div class="hero__icon">
-									<img src="@img/hero/icon-3.svg" alt="">
+									<img src="img/hero/icon-3.svg" alt="">
 								</div>
 								<p class="hero__text">Полная автоматизация проезда</p>
 							</li>
@@ -37,7 +83,7 @@
 						</div>
 					</div>
 					<div class="hero__image-ibg">
-						<img src="@img/hero/main.svg" alt="">
+						<img src="img/hero/main.svg" alt="">
 					</div>
 				</div>
 			</section>
@@ -52,32 +98,32 @@
 							<div class="solutions__question">
 								<p class="solutions__text">Занята парковка автомобилями из соседних дворов</p>
 								<div class="solutions__question_av">
-									<img src="@img/solutions/av-1.svg" alt="">
+									<img src="img/solutions/av-1.svg" alt="">
 								</div>
 							</div>
 							<div class="solutions__question">
 								<p class="solutions__text">Неопознанные авто
 									на парковке</p>
 								<div class="solutions__question_av">
-									<img src="@img/solutions/av-2.svg" alt="">
+									<img src="img/solutions/av-2.svg" alt="">
 								</div>
 							</div>
 							<div class="solutions__question">
 								<p class="solutions__text">Какое парковочное решение <br>
 									будет оптимальным для вас</p>
 								<div class="solutions__question_av">
-									<img src="@img/solutions/av-3.svg" alt="">
+									<img src="img/solutions/av-3.svg" alt="">
 								</div>
 							</div>
 							<div class="solutions__question">
 								<p class="solutions__text">Где найти комптентного и надежного подрядчика</p>
 								<div class="solutions__question_av">
-									<img src="@img/solutions/av-4.svg" alt="">
+									<img src="img/solutions/av-4.svg" alt="">
 								</div>
 							</div>
 						</div>
 						<div class="solutions__image-ibg">
-							<img src="@img/solutions/pic-1.svg" alt="">
+							<img src="img/solutions/pic-1.svg" alt="">
 						</div>
 					</div>
 					<div class="solutions__info">
@@ -97,7 +143,7 @@
 					<ul class="advantages__list">
 						<li class="advantages__item">
 							<div class="advantages__icon">
-								<img src="@img/advantages/icon-1.svg" alt="">
+								<img src="img/advantages/icon-1.svg" alt="">
 							</div>
 							<div class="advantages__info">
 								<h4 class="advantages__caption">Индивидуально</h4>
@@ -106,7 +152,7 @@
 						</li>
 						<li class="advantages__item">
 							<div class="advantages__icon">
-								<img src="@img/advantages/icon-2.svg" alt="">
+								<img src="img/advantages/icon-2.svg" alt="">
 							</div>
 							<div class="advantages__info">
 								<h4 class="advantages__caption">Удобно</h4>
@@ -115,7 +161,7 @@
 						</li>
 						<li class="advantages__item">
 							<div class="advantages__icon">
-								<img src="@img/advantages/icon-3.svg" alt="">
+								<img src="img/advantages/icon-3.svg" alt="">
 							</div>
 							<div class="advantages__info">
 								<h4 class="advantages__caption">Профессионально</h4>
@@ -125,7 +171,7 @@
 						</li>
 						<li class="advantages__item">
 							<div class="advantages__icon">
-								<img src="@img/advantages/icon-4.svg" alt="">
+								<img src="img/advantages/icon-4.svg" alt="">
 							</div>
 							<div class="advantages__info">
 								<h4 class="advantages__caption">Надежно</h4>
@@ -144,7 +190,7 @@
 					<div class="kits__row">
 						<div class="kits__image">
 							<div class="kits__image-ibg">
-								<img src="@img/kits/01.svg" alt="">
+								<img src="img/kits/01.svg" alt="">
 							</div>
 							<div class="kits__banner">
 								<span>на базе</span>
@@ -180,7 +226,7 @@
 					<div class="kits__row">
 						<div class="kits__image">
 							<div class="kits__image-ibg">
-								<img src="@img/kits/02.svg" alt="">
+								<img src="img/kits/02.svg" alt="">
 							</div>
 							<div class="kits__banner">
 								<span>на базе</span>
@@ -218,7 +264,7 @@
 					<div class="kits__row">
 						<div class="kits__image">
 							<div class="kits__image-ibg">
-								<img src="@img/kits/03.svg" alt="">
+								<img src="img/kits/03.svg" alt="">
 							</div>
 							<div class="kits__banner">
 								<span>на базе</span>
@@ -267,28 +313,28 @@
 					<ul class="stages__list">
 						<li class="stages__item">
 							<div class="stages__icon">
-								<img src="@img/stages/ic-1.svg" alt="">
+								<img src="img/stages/ic-1.svg" alt="">
 							</div>
 							<h3 class="stages__title">Оставляете запрос</h3>
 							<p class="stages__descr">Это бесплатно</p>
 						</li>
 						<li class="stages__item">
 							<div class="stages__icon">
-								<img src="@img/stages/ic-2.svg" alt="">
+								<img src="img/stages/ic-2.svg" alt="">
 							</div>
 							<h3 class="stages__title">Консультация с нашим специалистом</h3>
 							<p class="stages__descr">Это тоже абсолютно бесплатно!</p>
 						</li>
 						<li class="stages__item">
 							<div class="stages__icon">
-								<img src="@img/stages/ic-3.svg" alt="">
+								<img src="img/stages/ic-3.svg" alt="">
 							</div>
 							<h3 class="stages__title">Монтаж оборудования </h3>
 							<p class="stages__descr">Зависит от стоимости расчета</p>
 						</li>
 						<li class="stages__item">
 							<div class="stages__icon">
-								<img src="@img/stages/ic-4.svg" alt="">
+								<img src="img/stages/ic-4.svg" alt="">
 							</div>
 							<h3 class="stages__title">Комфортное использование</h3>
 							<p class="stages__descr">Выше вложенных средств</p>
@@ -308,7 +354,7 @@
 					<div class="equipment__cards">
 						<article class="equipment__card equipment__card_w-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/01.png" alt="">
+								<picture><source srcset="img/equipment/01.webp" type="image/webp"><img src="img/equipment/01.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">BG1060</h3>
@@ -319,7 +365,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_h-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/02.png" alt="">
+								<picture><source srcset="img/equipment/02.webp" type="image/webp"><img src="img/equipment/02.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">VR10</h3>
@@ -331,7 +377,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_h-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/03.png" alt="">
+								<picture><source srcset="img/equipment/03.webp" type="image/webp"><img src="img/equipment/03.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">PSA02 + PSA03</h3>
@@ -343,7 +389,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_w-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/04.png" alt="">
+								<picture><source srcset="img/equipment/04.webp" type="image/webp"><img src="img/equipment/04.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">GSM-контроллер RC-4000</h3>
@@ -354,7 +400,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_w-4fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/05.png" alt="">
+								<picture><source srcset="img/equipment/05.webp" type="image/webp"><img src="img/equipment/05.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">DL-852Q28B-LP</h3>
@@ -366,7 +412,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_h-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/06.png" alt="">
+								<picture><source srcset="img/equipment/06.webp" type="image/webp"><img src="img/equipment/06.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">Atlas 100</h3>
@@ -378,7 +424,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_h-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/07.png" alt="">
+								<picture><source srcset="img/equipment/07.webp" type="image/webp"><img src="img/equipment/07.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">UHF-10E PRO</h3>
@@ -390,7 +436,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_w-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/08.png" alt="">
+								<picture><source srcset="img/equipment/08.webp" type="image/webp"><img src="img/equipment/08.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">UR10RW-E</h3>
@@ -401,7 +447,7 @@
 						<!-- /.equipment__card -->
 						<article class="equipment__card equipment__card_w-2fr">
 							<div class="equipment__image">
-								<img src="@img/equipment/09.png" alt="">
+								<picture><source srcset="img/equipment/09.webp" type="image/webp"><img src="img/equipment/09.png" alt=""></picture>
 							</div>
 							<div class="equipment__info">
 								<h3 class="equipment__name">RFID Stick UHF </h3>
@@ -431,7 +477,7 @@
 							<!-- Слайд -->
 							<div class="realized__slide swiper-slide slide-realized">
 								<div class="slide-realized__image">
-									<img src="@img/realized/01.svg" alt="">
+									<img src="img/realized/01.svg" alt="">
 									<span>UHF</span>
 								</div>
 								<h3 class="slide-realized__title">Жилой комплекс</h3>
@@ -439,7 +485,7 @@
 							<!-- Слайд -->
 							<div class="realized__slide swiper-slide slide-realized">
 								<div class="slide-realized__image">
-									<img src="@img/realized/02.svg" alt="">
+									<img src="img/realized/02.svg" alt="">
 									<span>UHF</span>
 								</div>
 								<h3 class="slide-realized__title">Частный детский сад </h3>
@@ -447,7 +493,7 @@
 							<!-- Слайд -->
 							<div class="realized__slide swiper-slide slide-realized">
 								<div class="slide-realized__image">
-									<img src="@img/realized/03.svg" alt="">
+									<img src="img/realized/03.svg" alt="">
 									<span>LPR</span>
 								</div>
 								<h3 class="slide-realized__title">Отельный комплекс</h3>
@@ -455,7 +501,7 @@
 							<!-- Слайд -->
 							<div class="realized__slide swiper-slide slide-realized">
 								<div class="slide-realized__image">
-									<img src="@img/realized/01.svg" alt="">
+									<img src="img/realized/01.svg" alt="">
 									<span>UHF</span>
 								</div>
 								<h3 class="slide-realized__title">Жилой комплекс</h3>
@@ -463,7 +509,7 @@
 							<!-- Слайд -->
 							<div class="realized__slide swiper-slide slide-realized">
 								<div class="slide-realized__image">
-									<img src="@img/realized/02.svg" alt="">
+									<img src="img/realized/02.svg" alt="">
 									<span>UHF</span>
 								</div>
 								<h3 class="slide-realized__title">Частный детский сад </h3>
@@ -471,14 +517,14 @@
 							<!-- Слайд -->
 							<div class="realized__slide swiper-slide slide-realized">
 								<div class="slide-realized__image">
-									<img src="@img/realized/03.svg" alt="">
+									<img src="img/realized/03.svg" alt="">
 									<span>LPR</span>
 								</div>
 								<h3 class="slide-realized__title">Отельный комплекс</h3>
 							</div>
 							<div class="realized__slide swiper-slide slide-realized">
 								<div class="slide-realized__image">
-									<img src="@img/realized/03.svg" alt="">
+									<img src="img/realized/03.svg" alt="">
 									<span>LPR</span>
 								</div>
 								<h3 class="slide-realized__title">Отельный комплекс</h3>
@@ -489,10 +535,10 @@
 							<div class="swiper-pagination realized__pagination"></div>
 							<!-- Если нужна навигация (влево/вправо) -->
 							<button type="button" class="swiper-button-prev realized__slider_btn realized__slider_prev">
-								<img src="@img/realized/arrow.svg" alt="">
+								<img src="img/realized/arrow.svg" alt="">
 							</button>
 							<button type="button" class="swiper-button-next realized__slider_btn realized__slider_next">
-								<img src="@img/realized/arrow.svg" alt="">
+								<img src="img/realized/arrow.svg" alt="">
 							</button>
 						</div>
 					</div>
@@ -501,9 +547,31 @@
 			</section>
 			<!-- /.realized -->
 		</main>
-		@@include('html/_footer.htm',{})
+		<footer class="footer section__padding">
+			<div class="footer__container">
+				<div class="footer__top">
+					<a href="mailto:yevgen.mykhaylov@deps.ua" class="footer__email">
+						<div class="footer__icon footer__icon_email"></div>
+						<p class="footer__descr">Yevgen.Mykhaylov@deps.ua</p>
+					</a>
+					<address class="footer__address">
+						<div class="footer__icon footer__icon_map"></div>
+						<p class="footer__descr">ул. Маричанская, 18, г. Киев, 03040, Украина</p>
+					</address>
+					<a href="tel:+380676184407" class="footer__phone">
+						<div class="footer__icon footer__icon_phone"></div>
+						<p class="footer__descr">+380 67 618 44 07</p>
+					</a>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__text footer__copy">© 2022 DEPS. Все права защищены. Использование материалов с сайта — только с разрешения администрации.
+					</p>
+					<p class="footer__text">Цены указаны с учетом НДС. Сумма в долларах США является ориентировочной и не является ценой товара. Оплата осуществляется в грн по курсу на день оплаты.</p>
+				</div>
+			</div>
+		</footer>
 	</div>
-	@@include('html/_js.htm',{})
+	<script src="js/app.min.js?_v=20221212205009"></script>
 </body>
 
 </html>
